@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Events & Workshops</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="coffee.html">Coffee Selection</a>
+        <ul class="dropdown-content">
+          <li><a href="cappuccino.html">Cappuccino</a></li>
+          <li><a href="americano.html">Americano</a></li>
+          <li><a href="latte.html">Latte</a></li>
+        </ul>
+      </li>
+      <li><a href="brewing.html">Brewing Equipment</a></li>
+      <li><a href="events.html" class="active">Events & Workshops</a></li>
+      <li><a href="cart.html">Shopping Cart</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">Upcoming Events & Workshops</h1>
+    <div class="event-list" data-aos="fade-up">
+      <div class="event-item">
+        <h2>Coffee Tasting Session</h2>
+        <p>Date: October 15, 2025</p>
+        <p>Join us for an exclusive coffee tasting experience.</p>
+        <a href="registration.html" class="reg">Register Now</a>
+      </div>
+      <div class="event-item">
+        <h2>Brewing Masterclass</h2>
+        <p>Date: November 5, 2025</p>
+        <p>Learn the art of brewing the perfect cup of coffee.</p>
+        <a href="registration.html" class="reg">Register Now</a>
+      </div>
+      <div class="event-item">
+        <h2>Latte Art Lab</h2>
+        <p>Date: December 11, 2025</p>
+        <p>Learn the art of brewing the perfect cup of coffee.</p>
+        <a href="registration.html" class="reg">Register Now</a>
+      </div>
+    </div>
+
+    <h1 data-aos="fade-up">Recent Events & Workshops</h1>
+    <div class="event-list" data-aos="fade-up">
+      <div class="event-item">
+        <h2>Meet Roaster Session</h2>
+        <p>Date: October 15, 2024</p>
+        <p>Join us for an exclusive Meet Roaster experience.</p>
+        <iframe src="https://www.youtube.com/embed/5JxCwugEJdU" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <footer>
+    <p>&copy; 2025 Bean Boutique. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

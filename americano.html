@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Coffee Selection</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="coffee.html" class="active">Coffee Selection</a>
+        <ul class="dropdown-content">
+          <li><a href="cappuccino.html">Cappuccino</a></li>
+          <li><a href="americano.html">Americano</a></li>
+          <li><a href="latte.html">Latte</a></li>
+        </ul>
+      </li>
+      <li><a href="brewing.html">Brewing Equipment</a></li>
+      <li><a href="events.html">Events & Workshops</a></li>
+      <li><a href="cart.html">Shopping Cart</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">Americano Coffee Selection</h1>
+    <div class="coffee-list">
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/ClassicAmericano.jpg" alt="Cappuccino"> </a>
+        <h2>Classic Americano</h2>
+        <p><b>Tasting Notes:</b> Smooth and balanced—bold espresso aroma with lightly diluted intensity, retaining crema
+          complexity yet more mellow than straight espresso</p>
+        <p><b>Recommended Brew:</b> Pull one or two shots of espresso (approx. 45–50 ml total)<br>
+          Add 90–100 ml of hot water (≈93–95 °C) into a preheated cup<br>
+          Pour espresso over the water (preserves crema), or water first based on preference </p>
+        <p><b> $4 </b></p>
+        <button class="reg" onclick="addToCart('Classic Americano', 4, 'images/ClassicAmericano.jpg')">Add to
+          Cart</button>
+      </div>
+
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/LongBlackAmericano.jpg" alt="Americano"></a>
+        <h2>Long Black Americano</h2>
+        <p><b>Tasting Notes:</b> Stronger espresso-forward flavor with pronounced crema and slightly less dilution than
+          an Americano</p>
+        <p><b>Recommended Brew:</b> Add about 100–120 ml hot water first.
+          <br>Pour a double espresso (≈60 ml) gently on top to preserve crema
+        </p>
+        <p><b> $4.5 </b></p>
+        <button class="reg">Add to
+          Cart</button>
+      </div>
+
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/ShortAmericano.png" alt="Americano"></a>
+        <h2>Short Americano</h2>
+        <p><b>Tasting Notes:</b> Very bold and concentrated—nearly espresso strength with minimal dilution</p>
+        <p><b>Recommended Brew:</b> Pull one shot of espresso.
+          <br>Add an equal amount of hot water (1:1 ratio)
+          <br>Result is richer and more intense than standard Americanos
+        </p>
+        <p><b> $5 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/AmericanoMisto.jpg" alt="Americano"></a>
+        <h2>Americano Misto</h2>
+        <p><b>Tasting Notes:</b> Result is richer and more intense than standard Americanos</p>
+        <p><b>Recommended Brew:</b> Make a classic Americano (espresso + hot water).
+          <br>Add a splash of steamed milk or light foam (~50% water, ~25% espresso, ~25% milk).
+        </p>
+        <p><b> $3.9 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/IcedAmericano.jpg" alt="Americano"></a>
+        <h2>Iced Americano</h2>
+        <p><b>Tasting Notes:</b> Crisp and refreshing, clean coffee flavor with cool finish—not creamy, but light and
+          energizing</p>
+        <p><b>Recommended Brew:</b> Pull one or two espresso shots.
+          <br>Fill glass with ice.
+          <br>Pour cold water or cooled espresso over ice.
+          <br>Add espresso last or first, depending on preference
+        </p>
+        <p><b> $4.9 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/Red-Eye.jpg" alt="Americano"></a>
+        <h2>Red Eye</h2>
+        <p><b>Tasting Notes:</b> Very strong and high‑caffeine—robust espresso flavor bolstered by drip coffee base,
+          smooth yet punchy.</p>
+        <p><b>Recommended Brew:</b> Brew a cup of drip coffee.
+          <br>Pour one shot of espresso into it.
+          <br>Stir lightly—intense in both body and caffeine content
+        </p>
+        <p><b> $4 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".reg");
+
+        buttons.forEach(button => {
+          button.addEventListener("click", () => {
+            const coffeeItem = button.closest(".coffee-item");
+            const name = coffeeItem.querySelector("h2").innerText.trim();
+            const priceText = coffeeItem.querySelector("p:nth-of-type(3)").innerText.trim();
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ""));
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Check if item already exists
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              cart.push({ name, price, quantity: 1 });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Use SweetAlert2 instead of alert()
+            Swal.fire({
+              icon: "success",
+              title: "Added to Cart!",
+              text: `${name} has been added to your cart.`,
+              showConfirmButton: false,
+              timer: 1500
+            });
+          });
+        });
+      });
+
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bean Boutique. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

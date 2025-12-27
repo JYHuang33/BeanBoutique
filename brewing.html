@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Brewing Equipment</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="coffee.html">Coffee Selection</a>
+        <ul class="dropdown-content">
+          <li><a href="cappuccino.html">Cappuccino</a></li>
+          <li><a href="americano.html">Americano</a></li>
+          <li><a href="latte.html">Latte</a></li>
+        </ul>
+      </li>
+      <li><a href="brewing.html" class="active">Brewing Equipment</a></li>
+      <li><a href="events.html">Events & Workshops</a></li>
+      <li><a href="cart.html">Shopping Cart</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">Manual Brewing Equipment</h1>
+    <div class="equipment-list">
+      <div class="equipment-item brew-bg" data-aos="fade-up">
+        <img src="images/FrenchPress.jpg" alt="Espresso Machine">
+        <h2>French Press</h2>
+        <p>Full immersion brewing
+          <br>Rich, full-bodied coffee
+          <br>No paper filter—uses metal mesh plunger
+        </p>
+        <p class="price"><b>$50</b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+
+      <div class="equipment-item brew-bg" data-aos="fade-up">
+        <img src="images/PourOver.jpg" alt="French Press">
+        <h2>Pour-Over</h2>
+        <p>Manual drip method
+          <br>Clean, bright flavor
+          <br>Requires paper or metal filters
+        </p>
+        <p class="price"><b>$45.5</b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+
+      <div class="equipment-item brew-bg" data-aos="fade-up">
+        <img src="images/AeroPress.jpg" alt="French Press">
+        <h2>AeroPress</h2>
+        <p>Pressure-based, portable brewing
+          <br>Brews smooth and strong coffee
+          <br>Quick and versatile (can mimic espresso or drip)
+        </p>
+        <p class="price"><b>$55</b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+    </div>
+
+    <h1 data-aos="fade-up">Electric Brewing Equipment</h1>
+    <div class="equipment-list">
+      <div class="equipment-item brew-bg" data-aos="fade-up">
+        <img src="images/DripCoffeeMaker.jpg" alt="Espresso Machine">
+        <h2>Drip Coffee Maker</h2>
+        <p>Common in households
+          <br>Heats water and brews automatically
+          <br>Varies in quality and size
+        </p>
+        <p class="price"><b>$48</b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+
+      <div class="equipment-item brew-bg" data-aos="fade-up">
+        <img src="images/EspressoMachine.jpg" alt="French Press">
+        <h2>Espresso Machine</h2>
+        <p>Forces hot water through finely ground coffee under pressure
+          <br>Produces concentrated coffee with crema
+          <br>Manual, semi-automatic, or fully automatic models
+        </p>
+        <p class="price"><b>$89.9</b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="equipment-item brew-bg" data-aos="fade-up">
+        <img src="images/SingleServePod.jpg" alt="French Press">
+        <h2>Single-Serve Pod Machine</h2>
+        <p>Uses pre-packaged pods or capsules
+          <br>Fast and convenient
+          <br>Less control over quality
+        </p>
+        <p class="price"><b>$79</b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".reg");
+
+        buttons.forEach(button => {
+          button.addEventListener("click", () => {
+            const equipmentItem = button.closest(".equipment-item");
+            const name = equipmentItem.querySelector("h2").innerText.trim();
+            const priceText = equipmentItem.querySelector(".price").innerText.trim();
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ""));
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Check if item already exists
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              cart.push({ name, price, quantity: 1 });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Use SweetAlert2 instead of alert()
+            Swal.fire({
+              icon: "success",
+              title: "Added to Cart!",
+              text: `${name} has been added to your cart.`,
+              showConfirmButton: false,
+              timer: 1500
+            });
+          });
+        });
+      });
+
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+  </main>
+  <script src="scripts.js"></script>
+  <footer>
+    <p>&copy; 2025 Bean Boutique. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

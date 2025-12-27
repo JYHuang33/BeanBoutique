@@ -1,0 +1,682 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  background: #333333;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* Active highlighted navigation item */
+nav a.active {
+  background-color: #fff;
+  color: #333;
+}
+
+nav a:hover {
+  background-color: #555;
+  text-decoration: underline;
+}
+
+.slideshow img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  padding: 2rem;
+  margin-bottom: 100px;
+  /* Space for footer */
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 2rem;
+  width: 50%;
+  margin: 10% auto;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.privacy-notice {
+  font-size: 12px;
+  color: #666666;
+  text-align: center;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%; 
+    padding: 1.5rem; 
+    margin: 20% auto; 
+  }
+
+  .close {
+    font-size: 1.5rem; /* Slightly smaller close button */
+  }
+
+  .privacy-notice {
+    font-size: 10px; /* Slightly smaller text */
+  }
+}
+
+/* Coffee and Equipment List Styles */
+.coffee-list,
+.equipment-list,
+.event-list,
+.cart-items,
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.coffee-item,
+.equipment-item,
+.event-item,
+.cart-item,
+.offer-item {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgb(32, 55, 32);
+}
+
+.equipment-item img {
+  width: 70%;
+  height: auto;
+}
+
+.coffee-item img {
+  width: 70%;
+  height: auto;
+  /* height: 25vh; */
+  box-shadow: 0px 0px 10px 0px rgb(32, 55, 32);
+}
+
+.bg {
+  background-image: url("images/icon.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.bg1 {
+  background-image: url("images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.brew-bg {
+  background-image: url("images/gifbrewing-ezgif.com-resize.gif");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.event-item:nth-child(even) {
+  background-color: rgb(241, 222, 185);
+}
+
+.event-item:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Widget Styles */
+.widget {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.widget img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.widget h2 {
+  margin-bottom: 1rem;
+}
+
+.social-media-feed {
+  display: flex;
+  justify-content: center;
+}
+
+.map iframe {
+  border: none;
+  border-radius: 5px;
+}
+
+/* reCAPTCHA Styles */
+.g-recaptcha {
+  margin: 1rem 0;
+}
+
+.special_img {
+  width: 30%;
+  height: 50vh;
+  margin-left: 35%;
+}
+
+h1 {
+  text-shadow: 3px 3px 5px rgba(6, 70, 8, 0.3);
+}
+
+.reg {
+  background-color: #333333;
+  color: white;
+  width: 25%;
+  height: 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  margin-left: 35%;
+}
+
+.frm_container {
+  width: 60%;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+label {
+  display: inline-block;
+  width: 20%;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.frm_container input {
+  width: 40%;
+}
+
+.Subscribe {
+  width: 60%;
+  margin: 30px auto;
+  /* background-color: #d6d2d2; */
+  text-align: center;
+  padding: 10px;
+  box-shadow: 2px 2px 5px 5px rgb(48, 79, 48);
+}
+
+.inner {
+  display: flex;
+  gap: 30px;
+}
+
+.inner img {
+  width: 20%;
+}
+
+.Subscribe1 {
+  display: flex;
+}
+
+/* Dropdown Styles */
+nav ul li {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  display: block;
+  color: #fff;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Slideshow Styles */
+.slideshow {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 50vh;
+  display: none;
+}
+
+.slideshow img.active {
+  display: block;
+}
+
+.cart-items {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.cart-item {
+  background: #fff8f0;
+  border: 1px solid #d9c5b2;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #5c3d2e;
+}
+
+.cart-item p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+#total {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #5c3d2e;
+  margin-top: 10px;
+}
+
+#checkout {
+  display: block;
+  margin: 20px auto;
+  background: #8b5e34;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#checkout:hover {
+  background: #5c3d2e;
+}
+
+.qty-btn {
+  background: #8b5e34;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.qty-btn:hover {
+  background: #5c3d2e;
+}
+
+.remove-btn {
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-btn:hover {
+  background: #962d22;
+}
+
+/* Offers Section */
+.adv {
+  display: flex;
+  gap: 30px;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.adv img {
+  width: 40%;
+  height: 30vh;
+}
+
+.shop {
+  display: flex;
+  justify-content: space-between;
+  /* even spacing */
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* allows wrapping on small screens */
+}
+
+.shop-image {
+  flex: 1;
+  /* take equal space */
+  max-width: 23%;
+  /* ~4 per row with gap */
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(32, 55, 32, 0.3);
+}
+
+.shop-image img {
+  width: 100%;
+  /* fit container */
+  height: 250px;
+  /* same height for all */
+  object-fit: cover;
+  /* crop nicely */
+  border-radius: 8px;
+}
+
+/* ===== Responsive Styles ===== */
+@media screen and (max-width: 768px) {
+
+  /* Navigation: stack items vertically */
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Header text alignment */
+  header {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* Coffee, Equipment, Event, Offers, Shop lists: full width on mobile */
+  .coffee-item,
+  .equipment-item,
+  .event-item,
+  .cart-item,
+  .offer-item,
+  .shop-image,
+  .adv img,
+  .special_img {
+    width: 100% !important;
+    /* full width for small screens */
+    margin: 0 auto;
+  }
+
+  /* Inner flex containers: stack vertically */
+  .inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .Subscribe1 {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Form adjustments */
+  .frm_container {
+    width: 90%;
+  }
+
+  .frm_container input,
+  label {
+    width: 100%;
+    display: block;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Slideshow images: smaller height */
+  .slideshow img {
+    height: auto;
+  }
+
+  /* Footer adjustments */
+  footer {
+    position: relative;
+    bottom: auto;
+    padding: 1rem;
+  }
+
+  /* Modal content: full width on mobile */
+  .modal-content {
+    width: 90%;
+    margin: 5% auto;
+  }
+}
+
+/* Larger screens (desktops) */
+@media screen and (min-width: 769px) {
+  .shop-image {
+    max-width: 23%;
+    /* ~4 per row */
+  }
+
+  .coffee-item,
+  .equipment-item,
+  .event-item,
+  .cart-item,
+  .offer-item {
+    width: 30%;
+  }
+}
+
+/* animated text search */
+.search-container {
+  padding: 15px 15%;
+  text-align: center;
+  background-color: rgb(225, 255, 237);
+  border-bottom: 1px solid #d8dfda;
+}
+
+#product-search {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+#product-search:focus {
+  border-color: #1b683f;
+  outline: none;
+}
+
+.search-animation {
+  display: block;
+  margin-top: 5px;
+  height: 1.2em;
+  font-size: 0.9em;
+  color: #999;
+  transition: opacity 0.5s ease-in-out;
+  animation: typing 2s steps(40, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-container {
+    padding: 15px 5%;
+  }
+}
+
+/* registeration */
+.registration {
+  width: 300px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px rgb(2, 79, 71);
+}
+
+.space {
+  margin-bottom: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.registerH {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bt1 {
+  background-color: #333;
+  color: white;
+  width: 25%;
+  height: 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  margin-left: 35%;
+}
+
+.ip {
+  width: 90%;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+/* about coffee shop */
+.info-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+.info-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.info-container h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+
+.info-container p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.about,
+.contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .info-section {
+    padding: 40px 15px;
+  }
+
+  .info-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .info-container h2 {
+    font-size: 20px;
+  }
+
+  .info-container p {
+    font-size: 15px;
+  }
+}

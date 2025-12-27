@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Coffee Selection</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="coffee.html" class="active">Coffee Selection</a>
+        <ul class="dropdown-content">
+          <li><a href="cappuccino.html">Cappuccino</a></li>
+          <li><a href="americano.html">Americano</a></li>
+          <li><a href="latte.html">Latte</a></li>
+        </ul>
+      </li>
+      <li><a href="brewing.html">Brewing Equipment</a></li>
+      <li><a href="events.html">Events & Workshops</a></li>
+      <li><a href="cart.html">Shopping Cart</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">Cappuccino Coffee Selection</h1>
+    <div class="coffee-list">
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/ItalianCappuccino.jpg" alt="Cappuccino"> </a>
+        <h2>Traditional Italian Cappuccino</h2>
+        <p><b>Tasting Notes:</b> Balanced, rich espresso flavor with creamy, velvety milk and light sweetness. Slight
+          bitterness from the espresso is softened by the foam.</p>
+        <p><b>Recommended Brew:</b> Brew 1 shot (30 ml) of espresso.<br>Steam 100 ml of milk until it reaches 65–70°C
+          (149–158°F), creating microfoam.
+          <br>Pour steamed milk over the espresso, holding back the foam slightly.
+          <br>Spoon 1–2 cm of foam on top.
+          <br>Ratio: 1/3 espresso, 1/3 steamed milk, 1/3 foam.
+        </p>
+        <p><b> $4 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/DryCappuccino.jpg" alt="Americano"></a>
+        <h2>Dry Cappuccino</h2>
+        <p><b>Tasting Notes:</b> Stronger coffee flavor, lighter body. Less creamy, more intense espresso profile due to
+          less milk.</p>
+        <p><b>Recommended Brew:</b> Brew 1 shot of espresso.
+          <br>Steam a small amount of milk, creating mostly foam.
+          <br>Add just a small splash of steamed milk, then top with a thick layer of foam (about 2/3 of the cup).
+          <br>Difference: More foam, less milk—ideal for bold espresso lovers.
+        </p>
+        <p><b> $3.9 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/Wet_Cappuccino.jpg" alt="Latte"></a>
+        <h2>Wet Cappuccino</h2>
+        <p><b>Tasting Notes:</b> Smooth, creamier, slightly sweeter. Milder coffee presence.</p>
+        <p><b>Recommended Brew:</b> Brew 1 shot of espresso.
+          <br>Steam more milk than foam, similar to a latte.
+          <br>Pour the steamed milk directly over the espresso and top with a little foam.
+          <br>Ratio: Closer to 1/2 milk, 1/4 espresso, 1/4 foam.
+        </p>
+        <p><b> $4.5 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/Iced-cappuccino.jpg" alt="Cappuccino"> </a>
+        <h2>Iced Cappuccino</h2>
+        <p><b>Tasting Notes:</b> Chilled, refreshing, lighter body. Espresso notes still prominent, less creamy.</p>
+        <p><b>Recommended Brew:</b> Brew a double shot of espresso and let it cool.
+          <br>Froth cold milk using a milk frother or French press.
+          <br>Pour espresso over ice, then add frothed cold milk and foam.
+          <br>Optional: Add a dash of vanilla syrup or cinnamon.
+        </p>
+        <p><b> $4.9 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/FlavoredCappuccino.jpg" alt="Americano"></a>
+        <h2>Flavored Cappuccino</h2>
+        <p><b>Tasting Notes:</b> Sweet and aromatic with a distinct flavored twist. Espresso may take a backseat to
+          syrup flavor.</p>
+        <p><b>Recommended Brew:</b> Brew 1 shot of espresso.
+          <br>Add 1–2 pumps of flavored syrup (vanilla, caramel, mocha).
+          <br>Steam milk and pour into the cup, then top with foam.<br>Garnish (optional): drizzle of sauce, cocoa
+          powder, or cinnamon.
+          <br>Tip: Use sugar-free syrup for a lighter version.
+        </p>
+        <p><b> $4.8 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/Dairy-FreeCappuccino.jpg" alt="Latte"></a>
+        <h2>Vegan or Non-Dairy Cappuccino</h2>
+        <p><b>Tasting Notes:</b> Nutty or creamy depending on the milk (e.g. almond, oat, soy). Can be slightly sweeter
+          or earthier.</p>
+        <p><b>Recommended Brew:</b> Brew 1 shot of espresso.
+          <br>Steam your preferred non-dairy milk (oat works best for good foam).
+          <br>Pour steamed milk and foam over espresso.
+          <br>Optional: Sprinkle cinnamon or cocoa powder.
+          <br>Note: Use barista-blend plant milks for better frothing results.
+
+        </p>
+        <p><b> $5 </b></p>
+        <button class="reg">Add to Cart</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".reg");
+
+        buttons.forEach(button => {
+          button.addEventListener("click", () => {
+            const coffeeItem = button.closest(".coffee-item");
+            const name = coffeeItem.querySelector("h2").innerText.trim();
+            const priceText = coffeeItem.querySelector("p:nth-of-type(3)").innerText.trim();
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ""));
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Check if item already exists
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              cart.push({ name, price, quantity: 1 });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Use SweetAlert2 instead of alert()
+            Swal.fire({
+              icon: "success",
+              title: "Added to Cart!",
+              text: `${name} has been added to your cart.`,
+              showConfirmButton: false,
+              timer: 1500
+            });
+          });
+        });
+      });
+
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bean Boutique. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

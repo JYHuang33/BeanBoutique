@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Shopping Registration</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="coffee.html">Coffee Selection</a>
+        <ul class="dropdown-content">
+          <li><a href="cappuccino.html">Cappuccino</a></li>
+          <li><a href="americano.html">Americano</a></li>
+          <li><a href="latte.html">Latte</a></li>
+        </ul>
+      </li>
+      <li><a href="brewing.html">Brewing Equipment</a></li>
+      <li><a href="events.html" class="active">Events & Workshops</a></li>
+      <li><a href="cart.html">Shopping Cart</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 class="registerH" data-aos="fade-up">Event & Workshops Registration Form</h1>
+    <div class="registration" data-aos="fade-up">
+
+      <div class="space">
+        <div><b>Select Event</b></div>
+        <form name="form1" id="form1" action="/action_page.php">
+        <select class="ip" name="event" id="event">
+          <option value="" selected="selected">Select Event</option>
+        </select>
+        </form>
+      </div>
+
+      <div class="space">
+        <div><b>First Name</b></div>
+        <div><input class="ip" type="text" /></div>
+      </div>
+
+      <div class="space">
+        <div><b>Last Name</b></div>
+        <div><input class="ip" type="text" /></div>
+      </div>
+
+      <div class="space">
+        <div><b>Email Address</b></div>
+        <div><input class="ip" type="email" /></div>
+      </div>
+
+      <div class="space">
+        <div><b>Password</b></div>
+        <div><input class="ip" type="password" /></div>
+      </div>
+
+      <div class="space">
+        <button class="bt1">Submit</button>
+      </div>
+
+    </div>
+  </main>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Bean Boutique. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Home</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- reCAPTCHA API -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="coffee.html">Coffee Selection</a>
+        <ul class="dropdown-content">
+          <li><a href="cappuccino.html">Cappuccino</a></li>
+          <li><a href="americano.html">Americano</a></li>
+          <li><a href="latte.html">Latte</a></li>
+        </ul>
+      </li>
+      <li><a href="brewing.html">Brewing Equipment</a></li>
+      <li><a href="events.html">Events & Workshops</a></li>
+      <li><a href="cart.html">Shopping Cart</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header with Slideshow -->
+  <header>
+    <div class="slideshow" data-aos="fade-up">
+      <img src="images/b1.png" alt="Coffee Beans">
+      <img src="images/b2.png" alt="Brewing Equipment">
+      <img src="images/b3.png" alt="People Enjoying Coffee">
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+      <source src="audio/bgmusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="welcome" data-aos="fade-up">
+      <h2>Welcome to Bean Boutique</h2>
+      <p>Discover the finest coffee blends and brewing equipment.</p>
+    </section>
+
+    <!-- Social Media Feed Widget -->
+    <section class="widget" data-aos="fade-up">
+      <h2>Discount & Subscription</h2>
+      <img src="images/banner.jpg" alt="Discount Offer">
+    </section>
+
+    <h1 data-aos="fade-up">Our Coffee Selection</h1>
+
+    <div class="coffee-list" data-aos="fade-up">
+      <div class="coffee-item bg1">
+        <a href="cappuccino.html">
+          <img src="images/Cappuccino.jpg" alt="Cappuccino">
+        </a>
+        <h2>Cappuccino</h2>
+        <p><b>Tasting Notes:</b> Balanced, creamy, stronger than a latte</p>
+        <p><b>Recommended Brew:</b> 1 shot of espresso + 60ml steamed milk + 60ml milk foam</p>
+      </div>
+
+      <div class="coffee-item bg1">
+        <a href="americano.html">
+          <img src="images/Americano.jpg" alt="Americano">
+        </a>
+        <h2>Americano</h2>
+        <p><b>Tasting Notes:</b> Smooth, less intense than espresso, but still bold</p>
+        <p><b>Recommended Brew:</b> 1 shot of espresso + 120ml–180ml hot water</p>
+      </div>
+
+      <div class="coffee-item bg1">
+        <a href="latte.html">
+          <img src="images/Latte.jpeg" alt="Latte">
+        </a>
+        <h2>Latte</h2>
+        <p><b>Tasting Notes:</b> Creamy, mellow, slightly sweet</p>
+        <p><b>Recommended Brew:</b> 1 shot of espresso + 150ml steamed milk + 1cm milk foam on top</p>
+      </div>
+    </div>
+
+    <!-- Interactive Map Widget -->
+    <section class="widget" data-aos="fade-up">
+      <h2>Visit Us</h2>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.9537353153166!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8a32f7f8c8!2sBean%20Boutique!5e0!3m2!1sen!2sus!4v1622549400000!5m2!1sen!2sus"
+          style="width:100%; height:300px; border:0;"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Images Widget -->
+    <section class="widget" data-aos="fade-up">
+      <h2>Our Café</h2>
+      <div class="shop">
+        <div class="shop-image"><img src="images/shop1.jpg" alt="Shop interior"></div>
+        <div class="shop-image"><img src="images/shop2.jpg" alt="Coffee counter"></div>
+        <div class="shop-image"><img src="images/shop4.jpg" alt="Seating area"></div>
+        <div class="shop-image"><img src="images/shop3.jpg" alt="Barista station"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="info-section" data-aos="fade-up">
+      <div class="info-container">
+
+        <div class="about">
+          <h2>About Bean Boutique</h2>
+          <p>
+            Bean Boutique is a modern café offering premium coffee,
+            handcrafted beverages, and a cozy space to relax and connect.
+          </p>
+        </div>
+
+        <div class="contact">
+          <h2>Contact Us</h2>
+          <p><strong>Address:</strong> Upper 19th street, Latha Township, Yangon, Myanmar</p>
+          <p><strong>Email:</strong> beanboutique@gmail.com</p>
+          <p><strong>Phone:</strong> +959 (234) 567-890</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bean Boutique. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal Popup -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Welcome to Bean Boutique</h2>
+      <p>
+        Sign up for our newsletter and enjoy
+        <strong>10% off your first purchase</strong>.
+      </p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <div class="g-recaptcha" data-sitekey="6Lc_rSwsAAAAAK4v5DpL0l0zD-pWx55z8rjjDw6I"></div>
+        <button type="submit">Get My 10% Off</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

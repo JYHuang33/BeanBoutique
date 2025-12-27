@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Coffee Selection</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- AOS.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="coffee.html" class="active">Coffee Selection</a>
+        <ul class="dropdown-content">
+          <li><a href="cappuccino.html">Cappuccino</a></li>
+          <li><a href="americano.html">Americano</a></li>
+          <li><a href="latte.html">Latte</a></li>
+        </ul>
+      </li>
+      <li><a href="brewing.html">Brewing Equipment</a></li>
+      <li><a href="events.html">Events & Workshops</a></li>
+      <li><a href="cart.html">Shopping Cart</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">Latte Coffee Selection</h1>
+    <div class="coffee-list">
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/latte_macchiato.jpg" alt="Cappuccino"> </a>
+        <h2>Classic Caffè Latte</h2>
+        <p><b>Tasting Notes:</b> Smooth, mild, and creamy with a gentle espresso flavor. The milk balances bitterness,
+          making it sweet and mellow.</p>
+        <p><b>Recommended Brew:</b>Brew 1–2 shots of espresso (30–60 ml).
+          <br>Steam 200 ml of milk until it’s velvety and reaches around 65°C (149°F).
+          <br>Pour milk slowly into the espresso, holding back foam.
+          <br>Top with a thin layer of foam (≈1 cm).
+        </p>
+        <p><b>Price </b> : $3.5</p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/VanillaLatte.jpg" alt="Americano"></a>
+        <h2>Vanilla Latte</h2>
+        <p><b>Tasting Notes:</b>Creamy and sweet with warm vanilla notes that soften the espresso. Comforting and
+          easy-drinking.</p>
+        <p><b>Recommended Brew:</b>Add 1–2 pumps of vanilla syrup to your cup.
+          <br>Brew 1–2 espresso shots.
+          <br>Steam 200 ml milk and pour over the espresso.
+          <br>Stir gently and optionally top with vanilla powder or whipped cream.
+        </p>
+        <p><b>Price </b> : $4</p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/Iced_Latte.jpg" alt="Cappuccino"> </a>
+        <h2>Iced Latte</h2>
+        <p><b>Tasting Notes:</b>Light, chilled, and refreshing. Smooth milk flavor dominates with a clean coffee
+          undertone.</p>
+        <p><b>Recommended Brew:</b> Brew a double espresso and let it cool.
+          <br>Fill a tall glass with ice.
+          <br>Add espresso over ice.
+          <br>Pour in cold milk (150–200 ml), stir, and serve with a straw.
+        </p>
+        <p><b>Price </b> : $4.5</p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/CaramelLatte.jpg" alt="Americano"></a>
+        <h2>Caramel Latte</h2>
+        <p><b>Tasting Notes:</b>Sweet and buttery caramel blends beautifully with the espresso’s roastiness. Rich,
+          indulgent, and dessert-like.</p>
+        <p><b>Recommended Brew:</b>Brew 1–2 shots of espresso.
+          <br>Add 1–2 pumps of caramel syrup.
+          <br>Steam 200 ml milk and pour over.
+          <br>Drizzle caramel sauce on top.
+        </p>
+        <p><b>Price </b> : $4.9</p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/matcha-latte.jpg" alt="Cappuccino"> </a>
+        <h2>Matcha Latte</h2>
+        <p><b>Tasting Notes:</b> Earthy and grassy from the matcha, with a creamy sweetness from the milk. Caffeine is
+          gentler than coffee.</p>
+        <p><b>Recommended Brew:</b>Whisk 1–2 tsp of matcha powder with hot water (60–70°C).
+          <br>Steam or froth 200 ml of milk.
+          <br>Pour milk into matcha base.
+          <br>Stir gently, and top with matcha dust if desired.
+        </p>
+        <p><b>Price </b> : $3.9</p>
+        <button class="reg">Add to Cart</button>
+      </div>
+      <div class="coffee-item bg" data-aos="fade-up">
+        <img src="images/chai-tea-latte.jpg" alt="Americano"></a>
+        <h2>Chai Latte</h2>
+        <p><b>Tasting Notes:</b> Spiced and aromatic. Notes of cinnamon, cardamom, and clove create a warm, cozy
+          experience.</p>
+        <p><b>Recommended Brew:</b>Steep chai tea bag or chai concentrate in hot water.
+          <br>Steam 200 ml milk and add to the chai.
+          <br>Stir in honey or brown sugar if desired.
+          <br>Top with foam and sprinkle cinnamon or nutmeg.
+        </p>
+        <p><b>Price </b> : $4.3</p>
+        <button class="reg">Add to Cart</button>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".reg");
+
+        buttons.forEach(button => {
+          button.addEventListener("click", () => {
+            const coffeeItem = button.closest(".coffee-item");
+            const name = coffeeItem.querySelector("h2").innerText.trim();
+            const priceText = coffeeItem.querySelector("p:nth-of-type(3)").innerText.trim();
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ""));
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Check if item already exists
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              cart.push({ name, price, quantity: 1 });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Use SweetAlert2 instead of alert()
+            Swal.fire({
+              icon: "success",
+              title: "Added to Cart!",
+              text: `${name} has been added to your cart.`,
+              showConfirmButton: false,
+              timer: 1500
+            });
+          });
+        });
+      });
+
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bean Boutique. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
